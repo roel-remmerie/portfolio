@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e2e8f0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: rgba(30, 58, 138, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    box-shadow: 0 20px 40px rgba(30, 58, 138, 0.4);
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    color: #60a5fa;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header-content h2 {
+    font-size: 1.4rem;
+    color: #a5b4fc;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+/* Contact Links */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.95rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.contact-link:hover {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+}
+
+.contact-link i {
+    color: #60a5fa;
+    width: 16px;
+    font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    min-height: 800px;
+}
+
+.left-column {
+    background: rgba(15, 23, 42, 0.7);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 30px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #60a5fa;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+    font-weight: 600;
+}
+
+/* Left Column Sections */
+.profile p {
+    text-align: justify;
+    color: #cbd5e1;
+}
+
+.skills ul,
+.languages ul {
+    list-style: none;
+}
+
+.skills li,
+.languages li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(96, 165, 250, 0.1);
+    color: #e2e8f0;
+}
+
+.level {
+    float: right;
+    color: #60a5fa;
+    font-weight: 500;
+}
+
+/* Right Column - Jobs */
+.job,
+.edu-item,
+.project {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(96, 165, 250, 0.1);
+}
+
+.job:last-child,
+.edu-item:last-child,
+.project:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.job h4,
+.edu-item h4,
+.project h4 {
+    color: #60a5fa;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.job h5,
+.edu-item h5 {
+    color: #a5b4fc;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.date {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.job ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #cbd5e1;
+}
+
+.job li {
+    margin-bottom: 8px;
+}
+
+.edu-item p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .left-column,
+    .right-column {
+        padding: 20px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .header,
+    .left-column {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+    }
+    
+    .contact-link {
+        color: black !important;
+        background: none !important;
+        border: none !important;
+        text-decoration: underline;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+}
