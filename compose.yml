@@ -1,0 +1,8 @@
+services:
+  web:
+    build: ./application
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./pages:/app/pages
+    restart: unless-stopped
